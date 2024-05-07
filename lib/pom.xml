@@ -53,7 +53,6 @@
                                 <argument>${project.build.directory}/libtemplates</argument>
                                 <argument>-classpath</argument>
                                 <classpath/>
-                                <argument>--shared</argument>
                             </arguments>
                         </configuration>
                     </execution>

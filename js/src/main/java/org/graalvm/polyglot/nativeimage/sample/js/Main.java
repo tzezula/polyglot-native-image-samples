@@ -8,7 +8,7 @@ import java.nio.file.Path;
 
 public final class Main {
 
-    private static final String SCRIPTS = """
+    private static final String SCRIPT = """
             let names = ['Jakub', 'Jan', 'Matias', 'Adam']
             let surname = ['Novak', 'Svoboda']
             let data = []
@@ -21,7 +21,7 @@ public final class Main {
               }
             }
             let libTemplates = Polyglot.import('lib_templates')
-            let templatesFunctions = libTemplates['org.graalvm.polyglot.nativeimage.sample.library.Templates'] 
+            let templatesFunctions = libTemplates['org.graalvm.polyglot.nativeimage.sample.library.Templates']
             templatesFunctions.asHtmlTable(data)
             """;
 
@@ -36,7 +36,7 @@ public final class Main {
                 .option("native.ImagePath", libraryPath.toString());
         try (Context ctx = builder.build()) {
             ctx.getPolyglotBindings().putMember("lib_templates", ctx.getBindings("native"));
-            Value result = ctx.eval("js", SCRIPTS);
+            Value result = ctx.eval("js", SCRIPT);
             System.out.println(result.asString());
         }
     }
