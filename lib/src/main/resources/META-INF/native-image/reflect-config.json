@@ -1,0 +1,14 @@
+[
+  {
+    "name" : "org.graalvm.polyglot.nativeimage.sample.library.Person",
+    "allDeclaredMethods" : true
+  },
+  {
+    "name" : "org.graalvm.polyglot.nativeimage.sample.library.Persons",
+    "allDeclaredMethods" : true
+  },
+  {
+    "name" : "org.graalvm.polyglot.nativeimage.sample.library.Templates",
+    "allDeclaredMethods" : true
+  }
+]
