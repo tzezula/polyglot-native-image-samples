@@ -25,6 +25,7 @@
     <modules>
         <module>lib</module>
         <module>js</module>
+        <module>espresso</module>
         <module>embedder</module>
     </modules>
 </project>
